@@ -1,7 +1,3 @@
-from pyexpat import model
-from statistics import mode
-from tkinter import CASCADE
-from turtle import title
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
