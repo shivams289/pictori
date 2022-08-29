@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.shortcuts import render
 from .models import Post
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -9,13 +10,7 @@ from django.views.generic import (
     DeleteView,
 )
 
-
 # Create your views here.
-def home(request):
-    context = {"posts": Post.objects.all()}
-    return render(request, "blog/home.html", context)
-
-
 class PostListView(ListView):
     model = Post
     template_name = "blog/home.html"
@@ -74,3 +69,7 @@ class PostDeleteView(
 
 def about(request):
     return render(request, "blog/about.html", {"title": "About"})
+
+
+def blog_home_unauth(request):
+    return render(request, "blog/blog_home_unauth.html", {"title": "Blog-Home-Unauth"})
