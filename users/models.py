@@ -1,7 +1,3 @@
-from distutils.command.upload import upload
-from email.policy import default
-from pyexpat import model
-from tkinter.tix import IMAGE
 from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
